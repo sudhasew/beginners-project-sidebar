@@ -1,0 +1,84 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: sans-serif;
+  background-color: lightcyan;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  width: 30%;
+  background-color: rgb(139, 164, 211);
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  padding: 15px 0;
+  line-height: 60px;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+}
+
+h1 {
+  text-transform: capitalize;
+  font-size: 2rem;
+  color: rgb(241, 10, 241);
+  padding-bottom: 7px;
+  margin: 0;
+}
+
+i {
+  color: rgb(245, 42, 7);
+}
+
+.close-btn {
+  margin-left: 30px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.sidebar-toggle {
+  height: auto;
+  font-size: 2rem;
+  border: none;
+  margin: 0 97%;
+  background: none;
+  cursor: pointer;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* SIDEBAR WILL DISAPPEAR FROM SIDEBAR. IF WE GIVE 100% AGAIN APPEAR */
+  transform: translate(-100%);
+  transition: 0.7s;
+}
+
+.show-sidebar {
+  /* IT WILL STAY LEFT SIDE ONLY WHEN CLICK ON THE SIDE BARS ICON */
+  transform: translate(0);
+}
+
+@media screen and (min-width: 676px) {
+  .sidebar {
+    width: 400px;
+  }
+}
